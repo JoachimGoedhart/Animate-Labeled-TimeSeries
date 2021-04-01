@@ -31,10 +31,11 @@ ggplot(df_tidy, aes(Time, Value, group = Object, color = Object)) +
   transition_reveal(Time) + 
 
   #Formatting of the figure layout  
-  coord_cartesian(xlim=c(0,290),clip = 'off') + 
+#  coord_cartesian(xlim=c(0,290),clip = 'off') + 
   theme(plot.margin = margin(5.5, 40, 5.5, 5.5)) +
   theme_light(base_size = 16) +
 
   #Remove Legend
-  theme(legend.position="none")
+  theme(legend.position="none") +
+  view_follow(fixed_y = TRUE)
 
